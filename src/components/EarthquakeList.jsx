@@ -19,6 +19,7 @@ const EarthquakeList = () => {
 
       if (earthquakeData) {
         setFeatures(features);
+
         setTitle(metadata.title);
         setLength(features.length);
         setLoading(false);
@@ -34,8 +35,10 @@ const EarthquakeList = () => {
   }, []);
 
   return (
-    <div className="bg-white w-full md:w-1/4 h-[33rem] shadow-xl rounded-md overflow-auto">
-      <div className="p-5 shadow-lg sticky top-0 bg-gradient-to-r from-fuchsia-700 to-purple-700 text-white">
+    <div
+      className={`bg-white w-full md:w-1/4 h-[33rem] shadow-xl rounded-md overflow-auto`}
+    >
+      <div className="p-5 shadow-lg sticky top-0 bg-purple-700 text-white">
         {error ? (
           <div>
             <p> {error} </p>
@@ -79,7 +82,7 @@ const EarthquakeList = () => {
           return (
             <>
               <div className="flex gap-8 p-5 hover:cursor-pointer">
-                <p> {feature.properties.mag.toFixed(1)} </p>
+                <p> {feature.properties.mag.toFixed(2)} </p>
                 <div>
                   <h4 className="font-bold"> {feature.properties.place} </h4>
                 </div>

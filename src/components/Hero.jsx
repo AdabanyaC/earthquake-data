@@ -23,7 +23,7 @@ const Hero = () => {
           <NavLink to="/latest-earthquakes">
             <PrimaryButtonLg
               btnText={"View Earthquake Data"}
-              bgColor="bg-gradient-to-r from-fuchsia-500 to-purple-500"
+              bgColor="bg-purple-700"
               textColor={"text-white"}
             />
           </NavLink>

@@ -7,7 +7,6 @@ const Navbar = () => {
 
   const handleToggleNav = () => {
     setToggleNav(!toggleNav);
-    console.log(toggleNav);
   };
 
   return (
@@ -50,7 +49,7 @@ const Navbar = () => {
         >
           <PrimaryButtonWithIcon
             btnText={"Github Repo"}
-            bgColor="bg-gradient-to-r from-fuchsia-500 to-purple-500"
+            bgColor="bg-purple-700"
             textColor={"text-white"}
           />
         </a>
