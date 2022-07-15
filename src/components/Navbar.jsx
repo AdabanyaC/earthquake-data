@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { PrimaryButton } from "./Buttons";
+import { PrimaryButtonWithIcon } from "./Buttons";
 
 const Navbar = () => {
   return (
@@ -16,7 +16,7 @@ const Navbar = () => {
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <NavLink to="/top-20">Top 20 Earthquakes</NavLink>
+            <NavLink to="/latest-earthquakes">Latest Earthquakes</NavLink>
           </li>
           <li>
             <NavLink to="/sort">Sort Earthquakes</NavLink>
@@ -30,7 +30,7 @@ const Navbar = () => {
         </ul>
       </div>
       <NavLink to="/">
-        <PrimaryButton
+        <PrimaryButtonWithIcon
           btnText={"Github Repo"}
           bgColor="bg-gradient-to-r from-fuchsia-500 to-purple-500"
           textColor={"text-white"}

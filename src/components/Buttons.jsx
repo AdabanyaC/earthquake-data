@@ -10,6 +10,19 @@ export const PrimaryButton = ({ btnText, bgColor, textColor }) => {
   );
 };
 
+export const PrimaryButtonWithIcon = ({ btnText, bgColor, textColor }) => {
+  return (
+    <button
+      className={`flex gap-2 px-6 py-3 rounded font-semibold ${bgColor} ${
+        bgColor === "main-red" ? `text-white` : textColor
+      }`}
+    >
+      <i class="bi bi-github"></i>
+      <p>{btnText}</p>
+    </button>
+  );
+};
+
 export const PrimaryButtonLg = ({ btnText, bgColor, textColor }) => {
   return (
     <button
