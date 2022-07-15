@@ -13,9 +13,12 @@ const bgImg = {
 
 const LatestEarthquakes = () => {
   return (
-    <div className="px-20 py-12 bg-[#fcf5fe] h-screen" style={bgImg}>
+    <div
+      className="px-8 md:px-20 py-12 bg-[#fcf5fe] h-full md:h-screen"
+      style={bgImg}
+    >
       <Navbar />
-      <div className="flex gap-8 mt-12">
+      <div className="flex flex-col md:flex-row gap-8 mt-12">
         <EarthquakeList />
         <EarthquakeMap />
       </div>
