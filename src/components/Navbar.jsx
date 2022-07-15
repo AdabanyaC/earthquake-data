@@ -56,7 +56,9 @@ const Navbar = () => {
       </div>
       {/* Mobile Nav */}
       <div
-        className={`mt-5 bg-gray-100 rounded ${toggleNav ? `block` : `hidden`}`}
+        className={`mt-5 bg-gray-100 rounded md:hidden ${
+          toggleNav ? `block` : `hidden`
+        }`}
       >
         <ul className="font-semibold">
           <li className="p-4">
