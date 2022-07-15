@@ -4,6 +4,8 @@ import axios from "axios";
 const EarthquakeList = () => {
   const [loading, setLoading] = useState(false);
   const [features, setFeatures] = useState([]);
+  const [title, setTitle] = useState("");
+  const [length, setLength] = useState();
   const [error, setError] = useState("");
 
   const getEarthquakes = async () => {
@@ -13,10 +15,12 @@ const EarthquakeList = () => {
         "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_day.geojson"
       );
 
-      console.log("Is it true?", loading);
+      let { features, metadata } = earthquakeData.data;
 
       if (earthquakeData) {
-        setFeatures(earthquakeData.data.features);
+        setFeatures(features);
+        setTitle(metadata.title);
+        setLength(features.length);
         setLoading(false);
       }
     } catch (err) {
@@ -29,15 +33,32 @@ const EarthquakeList = () => {
     getEarthquakes();
   }, []);
 
-  console.log(loading);
-
   return (
     <div className="bg-white w-1/4 h-[33rem] shadow-xl rounded-md overflow-auto">
+      <div className="p-5 shadow-lg sticky top-0 bg-gradient-to-r from-fuchsia-700 to-purple-700 text-white">
+        {error ? (
+          <div>
+            <p> {error} </p>
+          </div>
+        ) : (
+          <div>
+            <h3 className="font-bold"> {title} </h3>
+            <p>
+              {loading ? (
+                `Loading Earthquakes Data`
+              ) : (
+                <span className="font-bold">{length} Earthquakes </span>
+              )}
+            </p>
+          </div>
+        )}
+      </div>
+      <hr />
       {loading ? (
         <div role="status" className="flex justify-center mt-12">
           <svg
             aria-hidden="true"
-            class="w-24 h-24 text-gray-200 animate-spin  fill-purple-500"
+            className="w-24 h-24 text-gray-200 animate-spin  fill-purple-500"
             viewBox="0 0 100 101"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +72,7 @@ const EarthquakeList = () => {
               fill="currentFill"
             />
           </svg>
-          <span class="sr-only">Loading...</span>
+          <span className="sr-only">Loading...</span>
         </div>
       ) : (
         features.map((feature) => {

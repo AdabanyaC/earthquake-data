@@ -17,7 +17,7 @@ export const PrimaryButtonWithIcon = ({ btnText, bgColor, textColor }) => {
         bgColor === "main-red" ? `text-white` : textColor
       }`}
     >
-      <i class="bi bi-github"></i>
+      <i className="bi bi-github"></i>
       <p>{btnText}</p>
     </button>
   );

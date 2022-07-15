@@ -21,21 +21,19 @@ const Navbar = () => {
           <li>
             <NavLink to="/sort">Sort Earthquakes</NavLink>
           </li>
-          <li>
-            <NavLink to="/our-people">Feature 3</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact-us">Feature 4</NavLink>
-          </li>
         </ul>
       </div>
-      <NavLink to="/">
+      <a
+        href="https://github.com/AdabanyaC/futurice-task"
+        target="_blank"
+        rel="noreferrer"
+      >
         <PrimaryButtonWithIcon
           btnText={"Github Repo"}
           bgColor="bg-gradient-to-r from-fuchsia-500 to-purple-500"
           textColor={"text-white"}
         />
-      </NavLink>
+      </a>
     </div>
   );
 };
