@@ -15,7 +15,6 @@ const bgImg = {
 
 const SortFeature = () => {
   const [loading, setLoading] = useState(false);
-  const [features, setFeatures] = useState([]);
   const [newest, setNewest] = useState([]);
   const [isNew, setIsNew] = useState(true);
   const [oldest, setOldest] = useState([]);
@@ -97,9 +96,6 @@ const SortFeature = () => {
   useEffect(() => {
     getEarthquakes();
   }, []);
-
-  console.log("Is New", isNew);
-  console.log("Newest Array", newest);
 
   return (
     <div
