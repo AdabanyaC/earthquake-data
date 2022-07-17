@@ -39,6 +39,9 @@ const Navbar = () => {
             <li>
               <NavLink to="/sort">Sort Earthquakes</NavLink>
             </li>
+            <li>
+              <NavLink to="/filter">Filter Earthquakes</NavLink>
+            </li>
           </ul>
         </div>
         <a
@@ -71,6 +74,10 @@ const Navbar = () => {
           <hr />
           <li className="p-4">
             <NavLink to="/sort">Sort Earthquakes</NavLink>
+          </li>
+          <hr />
+          <li className="p-4">
+            <NavLink to="/filter">Filter Earthquakes</NavLink>
           </li>
         </ul>
       </div>

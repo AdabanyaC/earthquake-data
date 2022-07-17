@@ -1,48 +1,39 @@
 import React from "react";
 
-const SortList = ({
-  handleClickNewest,
-  handleClickOldest,
-  handleClickLargest,
-  handleClickSmallest,
+const FilterList = ({
+  handleClickAll,
+  handleClickGreater,
+  handleClickLess,
 }) => {
   return (
     <div className="bg-white h-full w-full md:w-1/4 shadow-xl rounded-md overflow-auto">
       <div className="p-5 shadow-lg sticky top-0 bg-purple-700 text-white font-bold">
-        Sort Earthquakes
+        Filter Earthquakes
       </div>
       <>
         <div
           className="p-5 hover:cursor-pointer hover:bg-gray-100"
-          onClick={handleClickNewest}
+          onClick={handleClickAll}
         >
-          <p> Newest First </p>
+          <p> All Earthquakes </p>
         </div>
         <hr />
         <div
           className="p-5 hover:cursor-pointer hover:bg-gray-100"
-          onClick={handleClickOldest}
+          onClick={handleClickGreater}
         >
-          <p> Oldest First </p>
+          <p> Magnitude Greater than 3 </p>
         </div>
         <hr />
         <div
           className="p-5 hover:cursor-pointer hover:bg-gray-100"
-          onClick={handleClickLargest}
+          onClick={handleClickLess}
         >
-          <p> Largest Magnitude First </p>
+          <p> Magnitude Less than 3 </p>
         </div>
-        <hr />
-        <div
-          className="p-5 hover:cursor-pointer hover:bg-gray-100"
-          onClick={handleClickSmallest}
-        >
-          <p> Smallest Magnitude First </p>
-        </div>
-        <hr />
       </>
     </div>
   );
 };
 
-export default SortList;
+export default FilterList;
