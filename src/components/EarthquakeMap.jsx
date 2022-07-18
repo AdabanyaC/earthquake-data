@@ -27,7 +27,7 @@ const EarthquakeMap = () => {
   }, []);
 
   return (
-    <div className="bg-white w-full md:w-3/4 h-[33rem] lg:h-[85vh] relative shadow-xl rounded-md">
+    <div className="bg-white w-full md:w-3/4 h-[33rem] lg:h-[77vh] relative shadow-xl rounded-md">
       {!error && (
         <MapContainer
           center={[6.524379, 3.379206]}
