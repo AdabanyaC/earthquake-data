@@ -13,7 +13,7 @@ const bgImg = {
 const LandingPage = () => {
   return (
     <div
-      className="px-8 md:px-20 py-12 bg-[#fcf5fe] h-screen overflow-auto md:overflow-y-hidden"
+      className="px-8 lg:px-20 py-12 bg-[#fcf5fe] h-screen overflow-auto lg:overflow-y-hidden"
       style={bgImg}
     >
       <Navbar />

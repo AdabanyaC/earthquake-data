@@ -87,11 +87,11 @@ const FilterEarthquakes = () => {
 
   return (
     <div
-      className="px-8 md:px-20 py-12 bg-[#fcf5fe] h-full md:h-screen"
+      className="px-8 lg:px-20 py-12 bg-[#fcf5fe] h-full lg:h-screen"
       style={bgImg}
     >
       <Navbar />
-      <div className="flex flex-col md:flex-row gap-4 mt-12">
+      <div className="flex flex-col lg:flex-row gap-4 mt-12">
         <FilterList
           handleClickAll={handleClickAll}
           handleClickGreater={handleClickGreater}

@@ -9,7 +9,7 @@ const SortedEartquakeList = ({
 }) => {
   return (
     <div
-      className={`bg-white w-full md:w-[36%] h-[33rem] lg:h-[77vh] shadow-xl rounded-md overflow-auto`}
+      className={`bg-white w-full lg:w-[36%] h-[33rem] lg:h-[77vh] shadow-xl rounded-md overflow-auto animate__animated animate__fadeIn`}
     >
       <div className="p-5 shadow-lg sticky top-0 bg-purple-700 text-white">
         {error ? (
