@@ -43,8 +43,8 @@ const EarthquakeMap = () => {
               <>
                 <Marker
                   position={[
-                    pos.geometry.coordinates[0],
                     pos.geometry.coordinates[1],
+                    pos.geometry.coordinates[0],
                   ]}
                 ></Marker>
               </>
