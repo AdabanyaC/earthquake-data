@@ -45,7 +45,7 @@ const Navbar = () => {
           </ul>
         </div>
         <a
-          href="https://github.com/AdabanyaC/futurice-task"
+          href="https://github.com/AdabanyaC/earthquake-data"
           target="_blank"
           rel="noreferrer"
           className="hidden lg:block"
@@ -79,7 +79,20 @@ const Navbar = () => {
           <li className="p-4">
             <NavLink to="/filter">Filter Earthquakes</NavLink>
           </li>
+          <hr />
         </ul>
+        <a
+          href="https://github.com/AdabanyaC/earthquake-data"
+          target="_blank"
+          rel="noreferrer"
+          className="block lg:hidden p-4"
+        >
+          <PrimaryButtonWithIcon
+            btnText={"Github Repo"}
+            bgColor="bg-purple-700"
+            textColor={"text-white"}
+          />
+        </a>
       </div>
     </>
   );
