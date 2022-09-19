@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="flex justify-between">
         <div className="self-center">
           <h3 className="text-2xl font-semibold">
-            <NavLink to="/">Futurice Task.</NavLink>
+            <NavLink to="/">Earthquake Data.</NavLink>
           </h3>
         </div>
         <div className="self-center block lg:hidden" onClick={handleToggleNav}>
